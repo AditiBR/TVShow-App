@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DisplayShowsComponent } from './display-shows/display-shows.component';
 import { DisplayShowsService } from './display-shows.service'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { DisplayShowsService } from './display-shows.service'
     DisplayShowsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [DisplayShowsService],
   bootstrap: [AppComponent]
