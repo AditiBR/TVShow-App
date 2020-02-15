@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DisplayShowsComponent } from './display-shows/display-shows.component';
+import { DisplayShowsService } from './display-shows.service'
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { DisplayShowsComponent } from './display-shows/display-shows.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [DisplayShowsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
