@@ -2,7 +2,8 @@ export interface IDisplayShows {
   name: string,
   language: string,
   genres: Array<string>,
-  runtime:number,
-  status:string,
-  summary:string
+  runtime: number,
+  status: string,
+  summary: string,
+  image: string
 }

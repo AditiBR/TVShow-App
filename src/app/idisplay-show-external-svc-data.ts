@@ -4,5 +4,9 @@ export interface IDisplayShowExternalSvcData {
   genres: Array<string>,
   status: string,
   runtime: number,
-  summary: string
+  summary: string,
+  image: {
+    medium: string,
+    original: string
+  }
 }

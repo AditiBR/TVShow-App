@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IDisplayShows } from '../idisplay-shows';
+import { DisplayShowsService } from '../display-shows.service';
 
 @Component({
   selector: 'app-display-shows',
@@ -9,14 +10,10 @@ import { IDisplayShows } from '../idisplay-shows';
 export class DisplayShowsComponent implements OnInit {
 
   displayShows: IDisplayShows
-  constructor() {
-    this.displayShows ={
-      name:'showname',
-      language:'english'
-   } as IDisplayShows
-  }
+  constructor(private displayShowService: DisplayShowsService) { }
 
   ngOnInit(): void {
+    this.displayShowService.getShowDetails('girls').subscribe(data => this.displayShows = data)
   }
 
 }

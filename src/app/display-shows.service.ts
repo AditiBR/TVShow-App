@@ -26,7 +26,8 @@ export class DisplayShowsService {
       genres: iDisplayShowExternalSvcData.genres,
       runtime: iDisplayShowExternalSvcData.runtime,
       status: iDisplayShowExternalSvcData.status,
-      summary: iDisplayShowExternalSvcData.summary
+      summary: iDisplayShowExternalSvcData.summary,
+      image: iDisplayShowExternalSvcData.image.medium
      }
    }
 }
