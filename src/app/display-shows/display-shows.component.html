@@ -1,10 +1,14 @@
 
 <div>
-      <img [src]='displayShows.image'> 
-      <p>Show Name: {{displayShows.name}}</p>
-      <p>Language: {{displayShows.language}}</p>
-      <p>Genres: {{displayShows.genres}}</p>
-      <p>Runtime: {{displayShows.runtime}}</p>
-      <p>Status: {{displayShows.status}}</p>
-      <p>Summary: {{displayShows.summary}}</p> 
+      <img [src]='displayShows.image' style="float: left;"> 
+      <div style="float: right;">
+            <p style="font-size:x-large;"><b>Show deatils</b></p>
+            <p><b>Show Name : </b> {{displayShows.name}}</p>
+            <p><b>Language : </b> {{displayShows.language}}</p>
+            <p><b>Genres :</b> {{displayShows.genres}}</p>
+            <p><b>Runtime : </b>{{displayShows.runtime}}</p>
+            <p><b>Status : </b> {{displayShows.status}}</p>
+            <!-- <p>Summary: {{displayShows.summary}}</p>  -->
+            <div [innerHTML]="displayShows.summary"></div>
+      </div>
 </div>
