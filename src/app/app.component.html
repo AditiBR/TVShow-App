@@ -5,8 +5,8 @@
   </mat-toolbar>
 </div>
 
-<app-search-show></app-search-show>  
+<app-search-show (searchEvent) = "doSearch($event)"></app-search-show>  
 
 <div>
-  <app-display-shows></app-display-shows>
+  <app-display-shows [showInfo] = "displayShowInfo"></app-display-shows>
 </div>

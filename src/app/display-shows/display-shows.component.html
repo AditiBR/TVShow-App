@@ -1,5 +1,5 @@
 
-<div>
+<div *ngIf="displayShows">
       <img [src]='displayShows.image' style="float: left;"> 
       <div style="float: right;">
             <p style="font-size:x-large;"><b>Show deatils</b></p>
@@ -7,8 +7,7 @@
             <p><b>Language : </b> {{displayShows.language}}</p>
             <p><b>Genres :</b> {{displayShows.genres}}</p>
             <p><b>Runtime : </b>{{displayShows.runtime}}</p>
-            <p><b>Status : </b> {{displayShows.status}}</p>
-            <!-- <p>Summary: {{displayShows.summary}}</p>  -->
+            <p><b>Status : </b> {{displayShows.status}}</p>           
             <div [innerHTML]="displayShows.summary"></div>
       </div>
 </div>

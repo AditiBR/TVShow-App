@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IDisplayShows } from '../idisplay-shows';
 import { DisplayShowsService } from '../display-shows.service';
 
@@ -9,11 +9,12 @@ import { DisplayShowsService } from '../display-shows.service';
 })
 export class DisplayShowsComponent implements OnInit {
 
+  @Input() showInfo: IDisplayShows
   displayShows: IDisplayShows
   constructor(private displayShowService: DisplayShowsService) { }
 
-  ngOnInit(): void {
-    this.displayShowService.getShowDetails('girls').subscribe(data => this.displayShows = data)
+  ngOnInit(): void {   
+    
   }
 
 }
